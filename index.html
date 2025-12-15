@@ -51,6 +51,23 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+	.profile {
+      grid-column: span 2;
+      grid-row: span 2;
+      /* Background Image Settings */
+      background-image: url('bg.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white; /* Change text to white for contrast */
+    }
+
+    /* Hover effect */
+    .card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
     }
 
     .card h2 {
@@ -79,10 +96,6 @@
       grid-column: span 1;
     }
 
-    .hobby {
-      grid-column: span 1;
-    }
-
     .tech {
       grid-column: span 2;
     }
@@ -91,16 +104,29 @@
       grid-column: span 2;
     }
 
+    .hobby {
+      grid-column: span 1;
+    }
+
+    .reflection {
+      grid-column: span 1;
+    }
+
     .playlist {
       grid-column: span 4;
     }
 
-    .social-links span {
+    .social-links a {
       display: inline-block;
-      margin-right: 12px;
+      margin-right: 14px;
       font-size: 0.9rem;
       color: var(--accent);
       font-weight: 500;
+      text-decoration: none;
+    }
+
+    .social-links a:hover {
+      text-decoration: underline;
     }
 
     .tag-list span {
@@ -142,6 +168,7 @@
       .tech,
       .case-study,
       .hobby,
+      .reflection,
       .playlist {
         grid-column: span 1;
       }
@@ -161,9 +188,8 @@
         <p class="tagline">“Innovating Agriculture Future.”</p>
       </div>
       <div class="social-links">
-        <span>LinkedIn</span>
-        <span>GitHub</span>
-        <span>UMT Portal</span>
+        <a href=""<a href=”https://github.com/s80562-beep” target="_blank">GitHub</a>
+        <a href="#" target="_blank">UMT Portal</a>
       </div>
     </div>
 
@@ -198,11 +224,20 @@
       <p>Evening gardening at garden</p>
     </div>
 
-    <!-- Card 6: Playlist -->
+    <!-- Card 6: Reflection -->
+    <div class="card reflection">
+      <h2>Why Food Tech Matters in Malaysia</h2>
+      <p>
+        Sustainable food security is crucial for our future. By optimizing local
+        processing methods, we can reduce waste and improve nutrition.
+      </p>
+    </div>
+
+    <!-- Card 7: Playlist -->
     <div class="card playlist">
       <h2>Study Playlist</h2>
       <div class="music-placeholder">
-        Music Player Placeholder
+       <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/6QdnKD1zwEgyOWtkrdzlOF?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div>
     </div>
 
