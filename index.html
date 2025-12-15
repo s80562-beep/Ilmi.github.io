@@ -1,0 +1,212 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SAIDATUL ILMI | Student Bento Page</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-main: #f7f9fb;
+      --bg-card: #ffffff;
+      --text-primary: #1f2933;
+      --text-secondary: #6b7280;
+      /* Deep blue-green accent inspired by UMT theme */
+      --accent: #0f4c75;
+      --border-soft: #e5e7eb;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-main);
+      color: var(--text-primary);
+      line-height: 1.6;
+      padding: 24px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: minmax(140px, auto);
+      gap: 20px;
+    }
+
+    .card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-soft);
+      border-radius: 16px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card h2 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+    }
+
+    .accent {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    /* Grid placement */
+    .profile {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+
+    .location {
+      grid-column: span 1;
+    }
+
+    .hobby {
+      grid-column: span 1;
+    }
+
+    .tech {
+      grid-column: span 2;
+    }
+
+    .case-study {
+      grid-column: span 2;
+    }
+
+    .playlist {
+      grid-column: span 4;
+    }
+
+    .social-links span {
+      display: inline-block;
+      margin-right: 12px;
+      font-size: 0.9rem;
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    .tag-list span {
+      display: inline-block;
+      background-color: rgba(15, 76, 117, 0.08);
+      color: var(--accent);
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      margin: 4px 6px 0 0;
+    }
+
+    .music-placeholder {
+      height: 60px;
+      border: 1px dashed var(--border-soft);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+    }
+
+    .tagline {
+      margin-top: 10px;
+      font-size: 0.95rem;
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+
+      .profile,
+      .location,
+      .tech,
+      .case-study,
+      .hobby,
+      .playlist {
+        grid-column: span 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- Card 1: Profile -->
+    <div class="card profile">
+      <div>
+        <h2>SAIDATUL ILMI BINTI MOHD YATIM</h2>
+        <p><span class="accent">Program:</span> Agrotechnology (Crop Science)</p>
+        <p><span class="accent">Year:</span> Year 1</p>
+        <p class="tagline">“Innovating Agriculture Future.”</p>
+      </div>
+      <div class="social-links">
+        <span>LinkedIn</span>
+        <span>GitHub</span>
+        <span>UMT Portal</span>
+      </div>
+    </div>
+
+    <!-- Card 2: Location -->
+    <div class="card location">
+      <h2>Location</h2>
+      <p>Universiti Malaysia Terengganu</p>
+      <p>Kuala Nerus</p>
+    </div>
+
+    <!-- Card 3: Subjects -->
+    <div class="card tech">
+      <h2>Subjects & Skills</h2>
+      <div class="tag-list">
+        <span>Food Chemistry</span>
+        <span>Microbiology</span>
+        <span>Excel</span>
+        <span>Lab Analysis</span>
+      </div>
+    </div>
+
+    <!-- Card 4: Case Study -->
+    <div class="card case-study">
+      <h2>Case Study</h2>
+      <p class="accent">Soil Moisture Sensor IoT</p>
+      <p>Analyzing texture profiles of soil moisture sensor IoT.</p>
+    </div>
+
+    <!-- Card 5: Hobby -->
+    <div class="card hobby">
+      <h2>Hobby</h2>
+      <p>Evening gardening at garden</p>
+    </div>
+
+    <!-- Card 6: Playlist -->
+    <div class="card playlist">
+      <h2>Study Playlist</h2>
+      <div class="music-placeholder">
+        Music Player Placeholder
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
+```
